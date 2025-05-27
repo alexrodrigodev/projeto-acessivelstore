@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Acessível Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="acessibilidade">
+    <button onclick="toggleContraste()">Contraste</button>
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="reduzirFonte()">A-</button>
+    <button onclick="ativarComandosPorVoz()">Ativar Comando de Voz</button>
+    <button onclick="ouvirComandos()">Ouvir Comandos Disponíveis</button>
+  </div>
+
+  <h1>Acessível Store</h1>
+
+  <div class="filtros">
+    <label for="filtroCategoria">Categoria:</label>
+    <select id="filtroCategoria" onchange="filtrarProdutos()">
+      <option value="todos">Todos</option>
+      <option value="camisas">Camisas</option>
+      <option value="calcas">Calças</option>
+      <option value="tenis">Tênis</option>
+      <option value="oculos">Óculos</option>
+    </select>
+
+    <label for="filtroSexo">Sexo:</label>
+    <select id="filtroSexo" onchange="filtrarProdutos()">
+      <option value="todos">Todos</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+    </select>
+  </div>
+
+  <div id="produtos">
+    <h2>Camisas</h2>
+<h3>Masculino</h3>
+<div class='grid' data-categoria='camisas' data-sexo='masculino'>
+
+<div class="produto">
+  <img src="imagens/camisas/masculino/84018AE0-76CA-48E5-A106-3F201B01CC39.jpeg" alt="camisas masculino" onclick="falar('Camisa polo verde masculina básica por R$ 49,90')">
+  <p>Camisa polo verde masculina básica por R$ 49,90</p>
+  <button onclick="adicionarAoCarrinho('Camisa polo verde masculina básica por R$ 49,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/masculino/29104F2F-3A49-4A8F-8413-1D652A361D37.jpeg" alt="camisas masculino" onclick="falar('Camisa polo branca com logo bordado por R$ 59,90')">
+  <p>Camisa polo branca com logo bordado por R$ 59,90</p>
+  <button onclick="adicionarAoCarrinho('Camisa polo branca com logo bordado por R$ 59,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/masculino/1ED073B3-05EE-472B-9F05-C97DD9323DD1.jpeg" alt="camisas masculino" onclick="falar('Camisa Brasil azul oficial Nike por R$ 149,90')">
+  <p>Camisa Brasil azul oficial Nike por R$ 149,90</p>
+  <button onclick="adicionarAoCarrinho('Camisa Brasil azul oficial Nike por R$ 149,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/masculino/D8691087-4CFE-48FC-B3AA-793D0D5F416B.jpeg" alt="camisas masculino" onclick="falar('Camisa com estampa floral masculina por R$ 69,90')">
+  <p>Camisa com estampa floral masculina por R$ 69,90</p>
+  <button onclick="adicionarAoCarrinho('Camisa com estampa floral masculina por R$ 69,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/masculino/618E6A4E-D67F-456B-B519-37AAEBA3F076.jpeg" alt="camisas masculino" onclick="falar('Camisa Brasil amarela oficial por R$ 149,90')">
+  <p>Camisa Brasil amarela oficial por R$ 149,90</p>
+  <button onclick="adicionarAoCarrinho('Camisa Brasil amarela oficial por R$ 149,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h3>Feminino</h3>
+<div class='grid' data-categoria='camisas' data-sexo='feminino'>
+
+<div class="produto">
+  <img src="imagens/camisas/feminino/A4448E29-B1DC-4334-B975-F9D6E8A9DE1E.jpeg" alt="camisas feminino" onclick="falar('Camiseta feminina rosa neon por R$ 39,90')">
+  <p>Camiseta feminina rosa neon por R$ 39,90</p>
+  <button onclick="adicionarAoCarrinho('Camiseta feminina rosa neon por R$ 39,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/feminino/474016C7-247C-4D3F-980F-9D0F186C4264.jpeg" alt="camisas feminino" onclick="falar('Camiseta feminina rosa claro por R$ 39,90')">
+  <p>Camiseta feminina rosa claro por R$ 39,90</p>
+  <button onclick="adicionarAoCarrinho('Camiseta feminina rosa claro por R$ 39,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/feminino/255F2042-BB3C-42C2-9F13-D2995EEED6EC.jpeg" alt="camisas feminino" onclick="falar('Camiseta feminina com estampa de cavalo por R$ 44,90')">
+  <p>Camiseta feminina com estampa de cavalo por R$ 44,90</p>
+  <button onclick="adicionarAoCarrinho('Camiseta feminina com estampa de cavalo por R$ 44,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/feminino/8CBE22D9-46F7-4AD7-A04B-DEBF337710E9.jpeg" alt="camisas feminino" onclick="falar('Camiseta dry-fit degradê lilás e branco por R$ 49,90')">
+  <p>Camiseta dry-fit degradê lilás e branco por R$ 49,90</p>
+  <button onclick="adicionarAoCarrinho('Camiseta dry-fit degradê lilás e branco por R$ 49,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/camisas/feminino/0EA70A52-DCBD-4C5E-807A-89E4706E2F89.jpeg" alt="camisas feminino" onclick="falar('Camiseta branca com estampa artística de leão por R$ 49,90')">
+  <p>Camiseta branca com estampa artística de leão por R$ 49,90</p>
+  <button onclick="adicionarAoCarrinho('Camiseta branca com estampa artística de leão por R$ 49,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h2>Calcas</h2>
+<h3>Masculino</h3>
+<div class='grid' data-categoria='calcas' data-sexo='masculino'>
+
+<div class="produto">
+  <img src="imagens/calcas/masculino/A98E61B4-598A-4F49-A5D3-7F42D88CD3B8.jpeg" alt="calcas masculino" onclick="falar('Calça jeans skinny azul masculina por R$ 89,90')">
+  <p>Calça jeans skinny azul masculina por R$ 89,90</p>
+  <button onclick="adicionarAoCarrinho('Calça jeans skinny azul masculina por R$ 89,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/calcas/masculino/2827E3E3-0F99-4B35-B95F-0EBEA40FB571.jpeg" alt="calcas masculino" onclick="falar('Calça de sarja marrom masculina por R$ 79,90')">
+  <p>Calça de sarja marrom masculina por R$ 79,90</p>
+  <button onclick="adicionarAoCarrinho('Calça de sarja marrom masculina por R$ 79,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/calcas/masculino/2CBD8C9A-1E67-4017-AF20-696A9C846E99.jpeg" alt="calcas masculino" onclick="falar('Calça de sarja bege clara por R$ 79,90')">
+  <p>Calça de sarja bege clara por R$ 79,90</p>
+  <button onclick="adicionarAoCarrinho('Calça de sarja bege clara por R$ 79,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/calcas/masculino/98B3CB1C-4A4A-4228-BEF1-AE75C404B082.jpeg" alt="calcas masculino" onclick="falar('Calça jeans escura masculina por R$ 94,90')">
+  <p>Calça jeans escura masculina por R$ 94,90</p>
+  <button onclick="adicionarAoCarrinho('Calça jeans escura masculina por R$ 94,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h3>Feminino</h3>
+<div class='grid' data-categoria='calcas' data-sexo='feminino'>
+
+<div class="produto">
+  <img src="imagens/calcas/feminino/2051EF35-ABED-4BF4-816C-A273CB8B7888.jpeg" alt="calcas feminino" onclick="falar('Calça alfaiataria vinho com cinto por R$ 99,90')">
+  <p>Calça alfaiataria vinho com cinto por R$ 99,90</p>
+  <button onclick="adicionarAoCarrinho('Calça alfaiataria vinho com cinto por R$ 99,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/calcas/feminino/1ACC0D9E-10A3-4CC1-8F5E-6F4B927DDC67.jpeg" alt="calcas feminino" onclick="falar('Calça preta reta feminina plus size por R$ 89,90')">
+  <p>Calça preta reta feminina plus size por R$ 89,90</p>
+  <button onclick="adicionarAoCarrinho('Calça preta reta feminina plus size por R$ 89,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/calcas/feminino/4114F22D-2A3F-400D-897C-84175A7F1358.jpeg" alt="calcas feminino" onclick="falar('Calça preta flare com elástico por R$ 89,90')">
+  <p>Calça preta flare com elástico por R$ 89,90</p>
+  <button onclick="adicionarAoCarrinho('Calça preta flare com elástico por R$ 89,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h2>Tenis</h2>
+<h3>Masculino</h3>
+<div class='grid' data-categoria='tenis' data-sexo='masculino'>
+
+<div class="produto">
+  <img src="imagens/tenis/masculino/5CAEEDE3-4937-4367-ADA8-5ED4823196A2.jpeg" alt="tenis masculino" onclick="falar('Tênis casual marrom de couro masculino por R$ 159,90')">
+  <p>Tênis casual marrom de couro masculino por R$ 159,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis casual marrom de couro masculino por R$ 159,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/tenis/masculino/F82FC8E5-8332-4D66-A1D8-5DC427D0DCED.jpeg" alt="tenis masculino" onclick="falar('Tênis Ollie branco e cinza masculino por R$ 129,90')">
+  <p>Tênis Ollie branco e cinza masculino por R$ 129,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis Ollie branco e cinza masculino por R$ 129,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/tenis/masculino/805D8FC4-5F76-401B-A0A1-F772399C5AB8.jpeg" alt="tenis masculino" onclick="falar('Tênis esportivo verde e laranja masculino por R$ 99,90')">
+  <p>Tênis esportivo verde e laranja masculino por R$ 99,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis esportivo verde e laranja masculino por R$ 99,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/tenis/masculino/AF532419-0185-4E87-9C18-886A769CA981.jpeg" alt="tenis masculino" onclick="falar('Tênis all black esportivo com solado aderente por R$ 149,90')">
+  <p>Tênis all black esportivo com solado aderente por R$ 149,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis all black esportivo com solado aderente por R$ 149,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h3>Feminino</h3>
+<div class='grid' data-categoria='tenis' data-sexo='feminino'>
+
+<div class="produto">
+  <img src="imagens/tenis/feminino/E1FDF53E-D93C-4762-8572-6C42A182E300.jpeg" alt="tenis feminino" onclick="falar('Tênis branco Adidas com estampa animal print por R$ 199,90')">
+  <p>Tênis branco Adidas com estampa animal print por R$ 199,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis branco Adidas com estampa animal print por R$ 199,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/tenis/feminino/49AB4666-70C9-4F2C-8DE7-7D6A8DB8DD3F.jpeg" alt="tenis feminino" onclick="falar('Tênis branco com plataforma e listras pretas por R$ 139,90')">
+  <p>Tênis branco com plataforma e listras pretas por R$ 139,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis branco com plataforma e listras pretas por R$ 139,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/tenis/feminino/99FD380E-0152-441A-B21C-8211CC365809.jpeg" alt="tenis feminino" onclick="falar('Tênis Adidas rosa claro feminino por R$ 169,90')">
+  <p>Tênis Adidas rosa claro feminino por R$ 169,90</p>
+  <button onclick="adicionarAoCarrinho('Tênis Adidas rosa claro feminino por R$ 169,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h2>Oculos</h2>
+<h3>Masculino</h3>
+<div class='grid' data-categoria='oculos' data-sexo='masculino'>
+
+<div class="produto">
+  <img src="imagens/oculos/masculino/952A3194-159D-4DC4-9CD7-0A4B5FCF6BDF.jpeg" alt="oculos masculino" onclick="falar('Óculos retrô redondo preto masculino por R$ 79,90')">
+  <p>Óculos retrô redondo preto masculino por R$ 79,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos retrô redondo preto masculino por R$ 79,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/oculos/masculino/902B4406-F13F-4FBD-B113-88FAB9D7AAE5.jpeg" alt="oculos masculino" onclick="falar('Óculos esportivo marrom polarizado por R$ 109,90')">
+  <p>Óculos esportivo marrom polarizado por R$ 109,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos esportivo marrom polarizado por R$ 109,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/oculos/masculino/F0D99FF7-30FE-4B51-BED2-E9D001DD6125.jpeg" alt="oculos masculino" onclick="falar('Óculos com lente espelhada azul masculino por R$ 119,90')">
+  <p>Óculos com lente espelhada azul masculino por R$ 119,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos com lente espelhada azul masculino por R$ 119,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/oculos/masculino/975385E5-EA2D-4C8D-86C6-79AF7B347EAC.png" alt="oculos masculino" onclick="falar('Óculos casual preto fosco por R$ 89,90')">
+  <p>Óculos casual preto fosco por R$ 89,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos casual preto fosco por R$ 89,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+<h3>Feminino</h3>
+<div class='grid' data-categoria='oculos' data-sexo='feminino'>
+
+<div class="produto">
+  <img src="imagens/oculos/feminino/D23CD510-73A5-48BE-9587-6DB91A5F2C30.jpeg" alt="oculos feminino" onclick="falar('Óculos de sol rose gold redondo feminino por R$ 89,90')">
+  <p>Óculos de sol rose gold redondo feminino por R$ 89,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos de sol rose gold redondo feminino por R$ 89,90')">Adicionar ao Carrinho</button>
+</div>
+
+<div class="produto">
+  <img src="imagens/oculos/feminino/6F6EEAF8-F400-4F20-81C3-DA7CCDB975F5.jpeg" alt="oculos feminino" onclick="falar('Óculos quadrado preto com detalhe dourado por R$ 119,90')">
+  <p>Óculos quadrado preto com detalhe dourado por R$ 119,90</p>
+  <button onclick="adicionarAoCarrinho('Óculos quadrado preto com detalhe dourado por R$ 119,90')">Adicionar ao Carrinho</button>
+</div>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
